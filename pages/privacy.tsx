@@ -5,153 +5,7 @@ import Section from '@/components/Section';
 
 const Privacy: React.FC = () => {
   const lastUpdated = 'January 15, 2024';
-
-  const sections = [
-    {
-      title: 'What We Collect',
-      icon: '📝',
-      content: [
-        {
-          subtitle: 'Information You Give Us',
-          text: 'When you fill out our contact form, schedule a consultation, or reach out via email, we collect:',
-          list: [
-            'Your name and contact details (email, phone)',
-            'Event details (type, date, guest count, budget)',
-            'Your event vision and preferences',
-            'Any other information you choose to share',
-          ],
-        },
-        {
-          subtitle: 'Information We Collect Automatically',
-          text: 'Like most websites, we automatically collect some technical information:',
-          list: [
-            'Browser type and device information',
-            'IP address and general location (city/state level)',
-            'Pages you visit and how long you stay',
-            'How you found us (search engine, social media, referral)',
-          ],
-          note: 'We use this to improve your experience and understand how people use our site.',
-        },
-      ],
-    },
-    {
-      title: 'How We Use Your Information',
-      icon: '🎯',
-      content: [
-        {
-          text: 'We use your information to provide you with excellent service:',
-          list: [
-            'Respond to your inquiries within 24 hours',
-            'Prepare custom event proposals',
-            'Coordinate with you during event planning',
-            'Send you relevant event planning tips (only if you subscribe)',
-            'Improve our website and services',
-            'Comply with legal obligations',
-          ],
-        },
-        {
-          emphasis: 'We will never sell your information to third parties. Ever.',
-        },
-      ],
-    },
-    {
-      title: 'Who We Share With',
-      icon: '🤝',
-      content: [
-        {
-          text: 'We only share your information when absolutely necessary:',
-          list: [
-            'Vendors we work with for your event (with your permission)',
-            'Service providers who help run our website (hosting, email, analytics)',
-            'Legal authorities if required by law',
-          ],
-        },
-        {
-          note: 'Any third-party service we use is carefully vetted and required to protect your data.',
-        },
-      ],
-    },
-    {
-      title: 'Cookies & Tracking',
-      icon: '🍪',
-      content: [
-        {
-          text: 'We use cookies (small text files) to:',
-          list: [
-            'Remember your preferences',
-            'Understand how you use our site',
-            'Show you relevant content',
-          ],
-        },
-        {
-          text: 'You can control cookies through your browser settings. Disabling cookies may affect some website features.',
-        },
-      ],
-    },
-    {
-      title: 'Your Rights & Choices',
-      icon: '✅',
-      content: [
-        {
-          text: 'You have complete control over your information:',
-          list: [
-            'Access: Request a copy of the data we have about you',
-            'Correction: Ask us to update incorrect information',
-            'Deletion: Request we delete your information (with some legal exceptions)',
-            'Opt-Out: Unsubscribe from marketing emails anytime',
-            'Portability: Request your data in a common format',
-          ],
-        },
-        {
-          cta: {
-            text: 'To exercise any of these rights, simply email us at',
-            link: 'hello@elevatevents.com',
-          },
-        },
-      ],
-    },
-    {
-      title: 'How We Protect Your Data',
-      icon: '🔒',
-      content: [
-        {
-          text: 'We take security seriously:',
-          list: [
-            'All data transmission is encrypted (SSL/TLS)',
-            'We use secure, reputable hosting providers',
-            'Access to your information is limited to authorized personnel only',
-            'We regularly review and update our security practices',
-          ],
-        },
-        {
-          note: 'While we do everything we can to protect your data, no method of internet transmission is 100% secure. We cannot guarantee absolute security.',
-        },
-      ],
-    },
-    {
-      title: 'Children\'s Privacy',
-      icon: '👶',
-      content: [
-        {
-          text: 'Our services are not intended for children under 13. We do not knowingly collect information from children. If you believe we have collected information from a child, please contact us immediately.',
-        },
-      ],
-    },
-    {
-      title: 'Changes to This Policy',
-      icon: '📅',
-      content: [
-        {
-          text: 'We may update this policy occasionally to reflect changes in our practices or legal requirements. We\'ll notify you of significant changes by:',
-          list: [
-            'Posting the updated policy with a new "Last Updated" date',
-            'Sending an email if you\'re on our mailing list',
-            'Displaying a notice on our website',
-          ],
-        },
-      ],
-    },
-  ];
+  const companyName = 'Elevate Events LLC';
 
   return (
     <>
@@ -159,7 +13,7 @@ const Privacy: React.FC = () => {
         <title>Privacy Policy - Elevate Events</title>
         <meta 
           name="description" 
-          content="How we collect, use, and protect your information. Read our transparent privacy policy." 
+          content="Our commitment to protecting your privacy and personal information." 
         />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
@@ -174,151 +28,353 @@ const Privacy: React.FC = () => {
       {/* Hero Section */}
       <Section background="cream">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="accent-text mb-3">Privacy Policy</p>
-          <h1 className="heading-1 mb-4">
-            Your Privacy Matters to Us
-          </h1>
-          <p className="body-text text-charcoal/80 max-w-2xl mx-auto mb-6">
-            We believe in being transparent about how we collect and use your information. This policy explains everything in plain English—no legal jargon.
-          </p>
-          <p className="text-sm font-montserrat text-charcoal/60">
+          <h1 className="heading-2 mb-4">Privacy Policy</h1>
+          <p className="text-sm font-montserrat text-charcoal/60 mb-3">
             Last Updated: {lastUpdated}
           </p>
-        </div>
-      </Section>
-
-      {/* Quick Summary */}
-      <Section>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-taupe/10 p-8 md:p-10 rounded-xl border-l-4 border-taupe">
-            <h2 className="font-playfair text-2xl font-bold text-charcoal mb-4">
-              The Quick Version
-            </h2>
-            <div className="space-y-3 body-text text-charcoal/80">
-              <p className="flex items-start gap-3">
-                <span className="text-taupe text-xl flex-shrink-0">✓</span>
-                <span>We collect only what we need to serve you better</span>
-              </p>
-              <p className="flex items-start gap-3">
-                <span className="text-taupe text-xl flex-shrink-0">✓</span>
-                <span>We never sell your information to anyone</span>
-              </p>
-              <p className="flex items-start gap-3">
-                <span className="text-taupe text-xl flex-shrink-0">✓</span>
-                <span>You can request your data or ask us to delete it anytime</span>
-              </p>
-              <p className="flex items-start gap-3">
-                <span className="text-taupe text-xl flex-shrink-0">✓</span>
-                <span>We protect your information with industry-standard security</span>
-              </p>
-            </div>
-          </div>
+          <p className="text-sm text-charcoal/70 max-w-2xl mx-auto">
+            Your privacy matters to us. This policy explains how we collect, use, and protect your information.
+          </p>
         </div>
       </Section>
 
       {/* Main Content */}
-      <Section background="cream">
+      <Section>
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-12">
-            {sections.map((section, index) => (
-              <div key={index} className="bg-white p-8 md:p-10 rounded-xl">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="text-4xl flex-shrink-0">
-                    {section.icon}
-                  </div>
-                  <div>
-                    <h2 className="font-playfair text-2xl md:text-3xl font-bold text-charcoal">
-                      {section.title}
-                    </h2>
-                  </div>
+          
+          {/* Quick Summary */}
+          <div className="bg-taupe/10 p-8 md:p-10 rounded-xl border-l-4 border-taupe mb-12">
+            <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+              Summary
+            </h2>
+            <ul className="space-y-3">
+              {[
+                'We collect information you provide and basic usage data',
+                'We never sell your personal information',
+                'You have the right to access, correct, or delete your data',
+                'We comply with GDPR, CCPA, and applicable privacy laws',
+                'We use industry-standard security measures',
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-3 text-charcoal/80">
+                  <span className="text-taupe text-lg flex-shrink-0">✓</span>
+                  <span className="text-sm md:text-base">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Detailed Sections */}
+          <div className="space-y-10">
+            
+            {/* Section 1: Information Collection */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                1. Information We Collect
+              </h2>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-montserrat text-base md:text-lg font-semibold text-charcoal mb-3">
+                    1.1 Information You Provide
+                  </h3>
+                  <p className="text-sm md:text-base text-charcoal/70 mb-3">
+                    We collect information when you:
+                  </p>
+                  <ul className="text-sm md:text-base text-charcoal/70 space-y-2 ml-6">
+                    <li>• Fill out contact or inquiry forms</li>
+                    <li>• Schedule consultations or book services</li>
+                    <li>• Subscribe to our newsletter</li>
+                    <li>• Communicate via email, phone, or in-person</li>
+                    <li>• Provide feedback or participate in surveys</li>
+                  </ul>
+                  <p className="text-sm md:text-base text-charcoal/70 mt-3">
+                    This may include: name, email, phone number, address, event details (date, location, type, budget), preferences, and any other information you share.
+                  </p>
                 </div>
 
-                <div className="space-y-6">
-                  {section.content.map((item, itemIndex) => (
-                    <div key={itemIndex}>
-                      {item.subtitle && (
-                        <h3 className="font-montserrat text-lg font-semibold text-charcoal mb-3">
-                          {item.subtitle}
-                        </h3>
-                      )}
-                      
-                      {item.text && (
-                        <p className="body-text text-charcoal/80 mb-3">
-                          {item.text}
-                        </p>
-                      )}
+                <div>
+                  <h3 className="font-montserrat text-base md:text-lg font-semibold text-charcoal mb-3">
+                    1.2 Automatically Collected Information
+                  </h3>
+                  <p className="text-sm md:text-base text-charcoal/70 mb-3">
+                    When you visit our website, we automatically collect:
+                  </p>
+                  <ul className="text-sm md:text-base text-charcoal/70 space-y-2 ml-6">
+                    <li>• Device information (browser, OS, device type)</li>
+                    <li>• Usage data (pages visited, time spent, links clicked)</li>
+                    <li>• IP address and approximate location</li>
+                    <li>• Referral source</li>
+                    <li>• Cookies and tracking technologies data</li>
+                  </ul>
+                </div>
 
-                      {item.list && (
-                        <ul className="space-y-2 ml-4">
-                          {item.list.map((listItem, listIndex) => (
-                            <li key={listIndex} className="flex items-start gap-3 text-charcoal/70">
-                              <span className="text-taupe mt-1">•</span>
-                              <span className="body-text text-sm">{listItem}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-
-                      {item.emphasis && (
-                        <div className="bg-taupe/5 p-4 rounded-lg border-l-4 border-taupe mt-4">
-                          <p className="font-montserrat text-sm font-semibold text-charcoal">
-                            {item.emphasis}
-                          </p>
-                        </div>
-                      )}
-
-                      {item.note && (
-                        <p className="text-sm text-charcoal/60 italic mt-3 pl-4 border-l-2 border-taupe/30">
-                          {item.note}
-                        </p>
-                      )}
-
-                      {item.cta && (
-                        <p className="mt-4 text-sm">
-                          <span className="text-charcoal/70">{item.cta.text} </span>
-                          <a 
-                            href={`mailto:${item.cta.link}`}
-                            className="font-semibold text-taupe hover:text-charcoal transition-colors"
-                          >
-                            {item.cta.link}
-                          </a>
-                        </p>
-                      )}
-                    </div>
-                  ))}
+                <div>
+                  <h3 className="font-montserrat text-base md:text-lg font-semibold text-charcoal mb-3">
+                    1.3 Third-Party Information
+                  </h3>
+                  <p className="text-sm md:text-base text-charcoal/70">
+                    We may receive information from analytics services (Google Analytics), social media platforms, and business partners who help us provide services.
+                  </p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Section 2: How We Use Information */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                2. How We Use Your Information
+              </h2>
+              
+              <div className="space-y-4 text-sm md:text-base text-charcoal/70">
+                <p><strong className="text-charcoal">Service Delivery:</strong> Respond to inquiries, provide consultations, plan events, and fulfill contracts.</p>
+                <p><strong className="text-charcoal">Communication:</strong> Send confirmations, updates, administrative messages, and respond to requests.</p>
+                <p><strong className="text-charcoal">Marketing:</strong> Send newsletters and promotional materials (only with consent or where permitted). You can unsubscribe anytime.</p>
+                <p><strong className="text-charcoal">Improvement:</strong> Analyze website usage, improve services, and enhance user experience.</p>
+                <p><strong className="text-charcoal">Legal Compliance:</strong> Comply with legal obligations, resolve disputes, and protect our rights.</p>
+              </div>
+            </div>
+
+            {/* Section 3: Information Sharing */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                3. How We Share Your Information
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4 font-semibold">
+                We do not sell your personal information.
+              </p>
+              
+              <div className="space-y-4 text-sm md:text-base text-charcoal/70">
+                <p><strong className="text-charcoal">Service Providers:</strong> Third-party vendors (hosting, email, analytics, payment processing) bound by confidentiality agreements.</p>
+                <p><strong className="text-charcoal">Event Vendors:</strong> With your consent, we share necessary information with venues, caterers, and other vendors for your event.</p>
+                <p><strong className="text-charcoal">Legal Requirements:</strong> When required by law, court order, or to protect rights and safety.</p>
+                <p><strong className="text-charcoal">Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets (you will be notified).</p>
+              </div>
+            </div>
+
+            {/* Section 4: Cookies */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                4. Cookies and Tracking
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4">
+                We use cookies and similar technologies to enhance your experience. Cookies are small text files stored on your device.
+              </p>
+              
+              <div className="space-y-4 text-sm md:text-base text-charcoal/70">
+                <p><strong className="text-charcoal">Essential Cookies:</strong> Required for website functionality.</p>
+                <p><strong className="text-charcoal">Analytics Cookies:</strong> Help us understand how visitors use our site (Google Analytics).</p>
+                <p><strong className="text-charcoal">Marketing Cookies:</strong> Track your preferences for personalized content.</p>
+              </div>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mt-4">
+                You can control cookies through your browser settings. Disabling cookies may affect website functionality.
+              </p>
+            </div>
+
+            {/* Section 5: Your Rights */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                5. Your Rights and Choices
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4">
+                Depending on your location, you have the following rights:
+              </p>
+              
+              <ul className="space-y-3 text-sm md:text-base text-charcoal/70 ml-6">
+                <li><strong className="text-charcoal">Access:</strong> Request a copy of your personal data</li>
+                <li><strong className="text-charcoal">Correction:</strong> Request correction of inaccurate information</li>
+                <li><strong className="text-charcoal">Deletion:</strong> Request deletion of your data (with some exceptions)</li>
+                <li><strong className="text-charcoal">Opt-Out:</strong> Unsubscribe from marketing communications</li>
+                <li><strong className="text-charcoal">Portability:</strong> Receive your data in a common format</li>
+                <li><strong className="text-charcoal">Object:</strong> Object to certain data processing</li>
+                <li><strong className="text-charcoal">Restrict:</strong> Request restriction of processing</li>
+              </ul>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mt-6">
+                To exercise these rights, email us at{' '}
+                <a href="mailto:hello@elevatevents.com" className="text-taupe hover:text-charcoal font-semibold">
+                  hello@elevatevents.com
+                </a>
+                . We will respond within 30 days.
+              </p>
+            </div>
+
+            {/* Section 6: Data Security */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                6. Data Security
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4">
+                We implement industry-standard security measures:
+              </p>
+              
+              <ul className="text-sm md:text-base text-charcoal/70 space-y-2 ml-6">
+                <li>• SSL/TLS encryption for data transmission</li>
+                <li>• Secure, reputable hosting providers</li>
+                <li>• Access controls and authentication</li>
+                <li>• Regular security reviews and updates</li>
+              </ul>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mt-4 italic">
+                Note: While we take every precaution, no internet transmission is 100% secure. We cannot guarantee absolute security.
+              </p>
+            </div>
+
+            {/* Section 7: Data Retention */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                7. Data Retention
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70">
+                We retain your information only as long as necessary for the purposes outlined in this policy, to comply with legal obligations, resolve disputes, and enforce agreements. When no longer needed, we securely delete or anonymize your data.
+              </p>
+            </div>
+
+            {/* Section 8: Children's Privacy */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                8. Children's Privacy
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70">
+                Our services are not directed to individuals under 13 years old. We do not knowingly collect information from children. If you believe we have collected information from a child, please contact us immediately, and we will delete it.
+              </p>
+            </div>
+
+            {/* Section 9: International Transfers */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                9. International Data Transfers
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70">
+                Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data in accordance with this policy and applicable laws.
+              </p>
+            </div>
+
+            {/* Section 10: Third-Party Links */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                10. Third-Party Links
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70">
+                Our website may contain links to third-party sites. We are not responsible for their privacy practices. We encourage you to review their privacy policies before providing any information.
+              </p>
+            </div>
+
+            {/* Section 11: California Privacy Rights */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                11. California Privacy Rights (CCPA)
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4">
+                California residents have additional rights:
+              </p>
+              
+              <ul className="text-sm md:text-base text-charcoal/70 space-y-2 ml-6">
+                <li>• Right to know what personal information is collected</li>
+                <li>• Right to know if personal information is sold or disclosed</li>
+                <li>• Right to opt-out of the sale of personal information</li>
+                <li>• Right to deletion of personal information</li>
+                <li>• Right to non-discrimination for exercising rights</li>
+              </ul>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mt-4">
+                We do not sell personal information. To exercise your rights, contact us at{' '}
+                <a href="mailto:hello@elevatevents.com" className="text-taupe hover:text-charcoal font-semibold">
+                  hello@elevatevents.com
+                </a>
+              </p>
+            </div>
+
+            {/* Section 12: GDPR Rights */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                12. European Privacy Rights (GDPR)
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4">
+                If you are in the European Economic Area (EEA), you have the right to:
+              </p>
+              
+              <ul className="text-sm md:text-base text-charcoal/70 space-y-2 ml-6">
+                <li>• Access your personal data</li>
+                <li>• Rectify inaccurate data</li>
+                <li>• Erase your data</li>
+                <li>• Restrict processing</li>
+                <li>• Data portability</li>
+                <li>• Object to processing</li>
+                <li>• Lodge a complaint with a supervisory authority</li>
+              </ul>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mt-4">
+                Legal basis for processing: Consent, contract performance, legal obligations, and legitimate interests.
+              </p>
+            </div>
+
+            {/* Section 13: Changes to Policy */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                13. Changes to This Policy
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4">
+                We may update this policy to reflect changes in our practices or legal requirements. We will notify you of significant changes by:
+              </p>
+              
+              <ul className="text-sm md:text-base text-charcoal/70 space-y-2 ml-6">
+                <li>• Posting the updated policy with a new "Last Updated" date</li>
+                <li>• Sending an email if you are on our mailing list</li>
+                <li>• Displaying a notice on our website</li>
+              </ul>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mt-4">
+                Your continued use of our services after changes indicates acceptance of the updated policy.
+              </p>
+            </div>
+
+            {/* Section 14: Contact Us */}
+            <div className="bg-cream p-8 md:p-10 rounded-xl">
+              <h2 className="font-playfair text-xl md:text-2xl font-bold text-charcoal mb-6">
+                14. Contact Us
+              </h2>
+              
+              <p className="text-sm md:text-base text-charcoal/70 mb-4">
+                For questions about this Privacy Policy or to exercise your rights:
+              </p>
+              
+              <div className="text-sm md:text-base text-charcoal/70 space-y-2">
+                <p><strong className="text-charcoal">{companyName}</strong></p>
+                <p>Email: <a href="mailto:hello@elevatevents.com" className="text-taupe hover:text-charcoal font-semibold">hello@elevatevents.com</a></p>
+                <p>Phone: <a href="tel:+15551234567" className="text-taupe hover:text-charcoal font-semibold">(555) 123-4567</a></p>
+                <p>Address: 123 Event Street, New York, NY 10001</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </Section>
 
-      {/* Contact Section */}
-      <Section>
+      {/* Bottom CTA */}
+      <Section background="cream">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-cream p-8 md:p-10 rounded-xl">
-            <div className="text-4xl mb-4">💬</div>
-            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-charcoal mb-4">
-              Questions About Privacy?
-            </h2>
-            <p className="body-text text-charcoal/80 mb-6">
-              We're here to help. If you have any questions about how we handle your information, we'd be happy to clarify.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:hello@elevatevents.com"
-                className="btn-primary"
-              >
-                Email Us
-              </a>
-              <a 
-                href="/contact"
-                className="btn-secondary"
-              >
-                Contact Form
-              </a>
-            </div>
-          </div>
+          <div className="text-4xl mb-4">💬</div>
+          <h2 className="font-playfair text-2xl font-bold text-charcoal mb-4">
+            Questions About Privacy?
+          </h2>
+          <p className="text-sm md:text-base text-charcoal/80 mb-6">
+            We are here to help clarify how we handle your information.
+          </p>
+          <a href="/contact" className="btn-primary">
+            Contact Us
+          </a>
         </div>
       </Section>
     </>
@@ -326,3 +382,4 @@ const Privacy: React.FC = () => {
 };
 
 export default Privacy;
+
