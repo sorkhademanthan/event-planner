@@ -120,9 +120,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
           <div
             className="relative transition-all duration-700 ease-out"
             style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? 'translateX(0)' : 'translateY(20px)'
+              transform: isVisible ? 'translateX(0)' : 'translateY(20px)',
+              opacity: isVisible ? 1 : 0
             }}
           >
             {/* Quote */}
