@@ -189,7 +189,11 @@ export const useMultipleScrollAnimations = (
 
           if (entry.isIntersecting) {
             setTimeout(() => {
-              setVisibleElements(prev => new Set([...prev, selector]));
+              setVisibleElements(prev => {
+                const newSet = new Set(prev);
+                newSet.add(selector);
+                return newSet;
+              });
             }, delay);
           } else if (!triggerOnce) {
             setVisibleElements(prev => {
