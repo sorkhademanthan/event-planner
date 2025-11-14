@@ -11,6 +11,14 @@ module.exports = {
         cream: '#f4f1ed',
         charcoal: '#36312f',
         'soft-white': '#f9f9f9',
+        // Organic color extensions for zen luxury
+        sand: '#f8f6f3',
+        linen: '#f0ebe6',
+        stone: '#e6e2dd',
+        silk: '#faf8f5',
+        'warm-taupe': '#a8988b',
+        'deep-charcoal': '#2a2523',
+        moss: '#7a8b7a',
       },
       fontFamily: {
         playfair: ['Playfair Display', 'Georgia', 'serif'],
